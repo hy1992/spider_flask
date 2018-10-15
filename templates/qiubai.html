@@ -1,0 +1,23 @@
+{% extends 'url.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title_ %}
+    <title>糗事百科段子</title>
+    {% endblock %}
+</head>
+<body>
+{% block body_ %}
+<form action="/qb" method="post">
+    <p>
+        请输入页数(建议小于5的整数):
+        <input type="text" name="page">
+    </p>
+    <p>
+        <input type="submit" value="提交">
+    </p>
+</form>
+{% endblock %}
+</body>
+</html>

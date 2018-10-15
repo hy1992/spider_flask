@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>糗事百科段子</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="show">
+    {% for item in user %}
+        <h2>{{ item.username }}</h2>
+        <p>{{ item.content }}</p>
+    {% endfor %}
+</div>
+<script>
+    var vm = Vue({
+        el:"#box",
+        data:{
+            user:"test"
+        }
+    })
+</script>
+
+</body>
+</html>

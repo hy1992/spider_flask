@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title_ %}
+    <title>首页二维码生成</title>
+    {% endblock %}
+    <style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#head{
+			height: 30px;
+			margin:5px auto;
+			padding: 20px;
+			background-color: rgba(140,190,0,.1);
+		}
+		a{
+			height: 30px;
+			font-size: 20px;
+			color: #000008;
+			text-decoration: none;
+			padding: 0 5px;
+		}
+		a:hover{
+			background-color: rgba(165,82,42,.5);
+			border: 10px;
+			color: #0DAD71;
+			border-radius:15%;
+		}
+		a:active{
+			background-color: rgba(165,82,42,1);
+		}
+	</style>
+</head>
+<body>
+<div id="head">
+		<a href="/">首页</a>
+		<a href="/tb">贴吧图片</a>
+		<a href="/text">长文二维码</a>
+		<a href="/qb">糗事百科</a>
+		<a href="#">猫眼电影排行</a>
+		<a href="#">更多</a>
+	</div>
+{% block body_ %}
+<div>
+    <p>二维码图片生成:</p>
+</div>
+<form action="/url" method="post">
+url: <input type="text" name="text" value="http://">
+<input type="submit" value="生成">
+</form>
+{% endblock %}
+</body>
+</html>

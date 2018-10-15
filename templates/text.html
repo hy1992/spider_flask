@@ -1,0 +1,19 @@
+{% extends 'url.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title_ %}
+    <title>长文二维码</title>
+    {% endblock %}
+</head>
+<body>
+
+{% block body_ %}
+<form action="/text" method="post">
+    请输入文本:<textarea name="text" id="text" cols="30" rows="10"></textarea>
+    <input type="submit" value="生成">
+</form>
+{% endblock %}
+</body>
+</html>

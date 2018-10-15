@@ -1,0 +1,15 @@
+{% extends 'url.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title_ %}
+    <title>二维码图片展示</title>
+    {% endblock %}
+</head>
+<body>
+{% block body_ %}
+<img src="{{ qrimg }}" alt="">
+{% endblock %}
+</body>
+</html>
